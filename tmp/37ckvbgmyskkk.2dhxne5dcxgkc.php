@@ -1,0 +1,57 @@
+  <!-- particles.js container --> 
+  <div id="particles-js" style="z-index:-1;"></div>
+  <div class="page-header" style="background-image: url('asset/img/bg1.svg'); background-size: cover; background-position: top center;"> <!-- background-postion: top center; -->
+    <div class="container mt-5">
+      <div class="row pt-5 mt-5 ">
+        <div class="col-lg-8 col-md-8 mb-5">
+          <div class="col-12 pt-4 mt-3 m-auto">
+            <img src="asset/img/bg_big.png" style="width: 64%;"/>
+          </div>
+        </div>
+       <!-- login card -->
+        <div class="col-lg-4 col-md-4 col-sm-8 m-auto mb-0 mt-3" id="login">
+            <div class="card card-profile">
+                <div class="card-avatar">
+                  <a href="#pablo">
+                    <img class="img" src="asset/img/user_default.png" />
+                  </a>
+                </div>
+                <div class="card-body">
+                    <?php if ($message): ?>
+                        <div class="alert alert-<?php echo $message['type']; ?>"><?php echo $message['data']; ?></div>
+                    <?php endif; ?>
+                    <form role="form" action="/login" method="POST">
+                      <div class="pr-4 m-auto pb-3 ">
+                        <div class="input-group pb-4 mt-4">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text">
+                                <i class="material-icons">sentiment_satisfied</i>
+                              </span>
+                            </div>
+                            <input type="text" name="username" class="form-control" placeholder="Username" autofocus required>
+                          </div>
+                          <div class="input-group pb-4">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text">
+                                <i class="material-icons">lock_outline</i>
+                              </span>
+                            </div>
+                            <input type="password" name="password" class="form-control" placeholder="Password" required>
+                          </div>
+                        </div>
+                        <div class="footer text-center pb-4">
+                            <button class="btn btn-lg btn-primary btn-block">Login</button>
+                        </div>
+                      </div>
+                    </form>
+                </div>
+              </div>
+         
+        </div>
+
+       
+        
+      </div>
+    </div>
+  </div>
+</div>
